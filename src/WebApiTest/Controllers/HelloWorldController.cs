@@ -16,7 +16,7 @@ public class HelloWorldController : ControllerBase
     [HttpGet]
     public IActionResult Get()
     {
-        var value = _helloService.GetGreeting();
+        var value = _helloService.GetGreeting() + "!!";
         return Ok(value);
     }
 }
