@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B8B081D6-8FEA-40B2-BDBC-A524C215BE07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "src\Core\Core.csproj", "{CC21A88D-5D40-4C30-A89A-91963FA5C558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "src\ConsoleTest\ConsoleTest.csproj", "{C3D6A620-E5E3-4D8D-8C6B-89B69F8C8A18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest", "src\WebApiTest\WebApiTest.csproj", "{AE684D0A-C42C-4D19-8BA2-3608FF98521D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{C990C1B4-BC22-43E5-B75F-C291BE398114}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-deploy-console-test.yml = .github\workflows\build-and-deploy-console-test.yml
+		.github\workflows\build-and-deploy-webapi-test.yml = .github\workflows\build-and-deploy-webapi-test.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC21A88D-5D40-4C30-A89A-91963FA5C558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC21A88D-5D40-4C30-A89A-91963FA5C558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC21A88D-5D40-4C30-A89A-91963FA5C558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC21A88D-5D40-4C30-A89A-91963FA5C558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D6A620-E5E3-4D8D-8C6B-89B69F8C8A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D6A620-E5E3-4D8D-8C6B-89B69F8C8A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D6A620-E5E3-4D8D-8C6B-89B69F8C8A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D6A620-E5E3-4D8D-8C6B-89B69F8C8A18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE684D0A-C42C-4D19-8BA2-3608FF98521D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE684D0A-C42C-4D19-8BA2-3608FF98521D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE684D0A-C42C-4D19-8BA2-3608FF98521D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE684D0A-C42C-4D19-8BA2-3608FF98521D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC21A88D-5D40-4C30-A89A-91963FA5C558} = {B8B081D6-8FEA-40B2-BDBC-A524C215BE07}
+		{C3D6A620-E5E3-4D8D-8C6B-89B69F8C8A18} = {B8B081D6-8FEA-40B2-BDBC-A524C215BE07}
+		{AE684D0A-C42C-4D19-8BA2-3608FF98521D} = {B8B081D6-8FEA-40B2-BDBC-A524C215BE07}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46897C82-6838-42DF-8F8F-3C8A0A06B7D7}
+	EndGlobalSection
+EndGlobal

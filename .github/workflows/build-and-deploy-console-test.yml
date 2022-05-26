@@ -1,0 +1,41 @@
+name: build-and-deploy-console-test
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'src/ConsoleTest/**'
+    - 'src/Core/**'
+    - '.github/workflows/build-and-deploy-console-test.yml'
+    
+jobs:
+  build-and-publish:
+    runs-on: 'windows-latest'
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x'
+    - name: build
+      run: dotnet build -c Release ./src/ConsoleTest
+      
+  deploy-dev:
+    runs-on: 'windows-latest'
+    environment: 'dev'
+    needs:
+    - build-and-publish
+    steps:
+    - name: deploy
+      run: echo deploying to dev ...
+      
+  deploy-prod:
+    runs-on: 'windows-latest'
+    environment: 'prod'
+    needs:
+    - build-and-publish
+    - deploy-dev
+    steps:
+    - name: deploy
+      run: echo deploying to prod ...
