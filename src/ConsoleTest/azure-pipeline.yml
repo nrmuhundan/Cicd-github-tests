@@ -1,0 +1,16 @@
+pool: Azure Pipelines
+
+pr: none
+
+trigger:
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - src/Core/*
+    - src/ConsoleTest/*  
+
+steps:
+- bash: echo ConsoleTest
+
