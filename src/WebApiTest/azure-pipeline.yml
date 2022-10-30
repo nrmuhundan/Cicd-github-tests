@@ -6,10 +6,27 @@ trigger:
   branches:
     include:
     - main
+    - features/*
   paths:
     include:
     - src/Core/*
     - src/WebApiTest/*  
 
-steps:
-- bash: echo WebApiTest
+stages:
+- stage: Echo1
+  jobs:
+  - deployment: Echo1
+    displayName: Echo1
+    environment: dev
+    strategy: 
+      runOnce:
+        deploy:
+          steps:
+          - bash: echo WebApiTest1 $(Build.SourceBranch)
+
+- stage: Echo2
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
+  jobs:
+  - job: Echo2
+    steps:
+    - bash: echo WebApiTest2
