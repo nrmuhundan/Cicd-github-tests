@@ -7,5 +7,4 @@ var serviceProvider = new ServiceCollection()
 
 var helloService = serviceProvider.GetService<IHelloService>();
 
-
 Console.WriteLine(helloService.GetGreeting());
